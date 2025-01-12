@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>2024 가계부</title>
+</head>
+<body>
+    <div><h1>2024 가계부</h1></div>
+    <hr>
+    <div>
+        <form method="POST" action="{{url_for('save_data')}}">
+<!--            <div>-->
+<!--                <label for="input-date">월 : </label>-->
+<!--                <input type="date" id="input-date" name="input_date" placeholder="08-05">-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <label for="input-inex">수익 / 지출 : </label>-->
+<!--                <input type="text" id="input-inex" name="input_inex" placeholder="수익 또는 지출 입력">-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <label for="input-price">금액 : </label>-->
+<!--                <input type="number" id="input-price" name="input_price" placeholder="금액 입력">-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <label for="input-detail">내역 : </label>-->
+<!--                <input type="text" id="input-detail" name="input_detail" placeholder="내역 입력">-->
+<!--            </div>-->
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text">날짜 입력</span>
+                <input type="date" class="form-control" aria-label="Sizing example input"
+                       min="2024-01-01" max="2024-12-31" aria-describedby="inputGroup-sizing-sm" name="input_date">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <label class="input-group-text" for="inputGroupSelect01">수익 / 지출</label>
+                <select class="form-select" id="inputGroupSelect01" name="input_inex">
+                <option selected>선택</option>
+                <option value="1">수익</option>
+                <option value="2">지출</option>
+                </select>
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text">금액</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                       aria-describedby="inputGroup-sizing-sm" name="input_price">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text">상세 내역</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                       aria-describedby="inputGroup-sizing-sm" name="input_detail">
+            </div>
+            <div class="d-grid gap-2">
+                <button class="btn btn-primary" type="submit">기록</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
